@@ -1,0 +1,17 @@
+1 - isolate library in seperate file.c and file.h
+2 - file.h : 
+#ifndef PRINT_H
+#define PRINT_H
+
+void show(int matrix[9][9]);
+
+#endif
+
+3 - gcc -c print.c -o print.o
+ar rcs libprint.a print.o
+
+4 - library in another program
+
+5 - compile prog with library gcc main.c -L. -lprint -o main
+
+6 - ./main
